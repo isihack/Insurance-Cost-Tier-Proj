@@ -36,17 +36,17 @@ This model outperformed all others across accuracy, precision, and F1 score metr
 - **Output:** Insurance cost tier (`Low`, `Medium`, `High`)
 - **Size:** 1,338 records
 - **Split:** 802 train / 268 validation / 268 test (stratified)
+- 
+### Preprocessing / Cleanup
+* One-hot encoding of categorical features
+* Standard scaling of numerical features
+* Quantile binning of `charges` into three cost tiers
+* Winsorization to control outliers in BMI
 
-###  Preprocessing
+### Data Visualization
+* **Histograms:** Distribution of age, BMI, and children by cost tier
+* **Count plots:** Smoker, region, and sex distributions by cost tier
 
-- Converted categorical variables via one-hot encoding
-- Standardized numeric variables (e.g., BMI, age)
-- Applied quantile-based binning on `charges`
-- Winsorized `bmi` to cap outliers
-
-###  Data Visualization
-
-- Seaborn-style histograms for cost-tier breakdowns
 ![image](https://github.com/user-attachments/assets/4924f023-0a0d-4a24-bc98-ece820df0e0a)
 ![image](https://github.com/user-attachments/assets/cceda7f0-b064-4ce4-971f-f58a15363cdc)
 ![image](https://github.com/user-attachments/assets/d912b4a1-1a64-424d-aee9-aec7e9b88645)
@@ -165,13 +165,11 @@ These results provide a strong starting point. Further performance gains may be 
 
 ---
 
-##  Training Details
-
-- **Environment:** Jupyter, Anaconda, or Kaggle Notebook
-- **Libraries:** `scikit-learn`, `pandas`, `matplotlib`, `seaborn`
-- **Training Strategy:** 5-fold `GridSearchCV`
-- **Duration:** Under 10 minutes for each model
-
+## Training
+* **Software:** Python 3, scikit-learn, pandas, matplotlib, seaborn
+* **Environment:** Jupyter Notebook (Anaconda/Kaggle)
+* **Training Method:** 5-fold GridSearchCV for hyperparameter optimization
+* **Duration:** Each model trained in under 10 minutes
 ---
 
 ##  Performance Comparison
@@ -239,7 +237,7 @@ The **tuned KNN** model achieved **84.70% validation accuracy** and a **macro F1
 
 ## How to Reproduce Results
 
-### : Clone Repository
+### Clone Repository
 ```bash
 git clone https://github.com/yourusername/insurance-cost-tier-classification.git
 cd insurance-cost-tier-classification
