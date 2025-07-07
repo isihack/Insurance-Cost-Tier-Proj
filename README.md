@@ -237,12 +237,33 @@ The **tuned KNN** model achieved **84.70% validation accuracy** and a **macro F1
 - Integrate additional socioeconomic features like income or location.
 - Deploy model using Flask or FastAPI.
 
+## How to Reproduce Results
+
+### : Clone Repository
+```bash
+git clone https://github.com/yourusername/insurance-cost-tier-classification.git
+cd insurance-cost-tier-classification
+### Step 2 pip install -r requirements.txt
+### Step 3: Download Dataset
+Download insurance.csv and place it in the project root
+
+Step 4: Run Notebook
+Open Cost Tiers.ipynb and run all cells to:
+
+Preprocess data
+
+Train models
+
+Visualize results
+
+View final evaluation
 ---
 
 .
 ├── insurance.csv             # Raw dataset from Kaggle
 ├── Cost Tiers.ipynb          # Main notebook with full project pipeline
 ├── README.md                 # Project documentation
+└── requirements.txt          # Python dependencies
 
 
 
